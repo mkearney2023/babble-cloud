@@ -51,10 +51,9 @@ if not args.action == "help":
         exit()
     check_if_built = subprocess.run("docker image inspect babble-cloud", shell=True, capture_output=True)
     if check_if_built.returncode != 0:
-        exit()
-    build_image = subprocess.run(f"docker build -t babble-cloud {path}", shell=True)
-    if build_image.returncode != 0:
-        exit()
+        build_image = subprocess.run(f"docker build -t babble-cloud {path}", shell=True)
+        if build_image.returncode != 0:
+            exit()
 
 def main():
     if args.action == "create":

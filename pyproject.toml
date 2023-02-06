@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "babble-cloud"
-version = "0.1.0"
+version = "0.1.1"
 description = "serverless applications made easy"
 authors = ["mkearney2023 <mkearney2023@gmail.com>"]
 readme = "README.md"
@@ -8,9 +8,12 @@ packages = [{include = "babble"}]
 
 [tool.poetry.dependencies]
 python = ">=3.7.2,<4.0"
-simiple-term-menu = "1.6.1"
+simple-term-menu = "1.6.1"
 yaspin = "2.3.0"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+babble = "babble.entry:main"
