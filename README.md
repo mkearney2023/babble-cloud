@@ -1,7 +1,7 @@
 
 # Babble Cloud
 
-Babble is a tool that enables beginner programmers to rapidly deploy serverless HTTP API's to AWS through a Pythonic YAML configuration file.
+Babble is a tool that enables beginner programmers to rapidly deploy serverless HTTP APIs to AWS through a low-code Pythonic YAML configuration file.
 
 
 ## Table of Contents
