@@ -19,6 +19,7 @@ if os.path.exists(f"/projects/{project}/aws/url"):
     spinner = yaspin(text="applying changes...").simpleDots
     spinner.start()
     subprocess.run(f"terraform -chdir=/projects/{project}/aws destroy -auto-approve", shell=True, capture_output=True)
+    spinner.write("> changes applied")
     spinner.stop()
 else:
     print("\n> project not active\n")
