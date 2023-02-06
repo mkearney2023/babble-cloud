@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "babble-cloud"
-version = "0.1.1"
+version = "0.1.2"
 description = "serverless applications made easy"
 authors = ["mkearney2023 <mkearney2023@gmail.com>"]
 readme = "README.md"
