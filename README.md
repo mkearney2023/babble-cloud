@@ -93,7 +93,7 @@ folders:
     ...
 ```
 ### Packages
-Package definitions are used to include external packages in both module and endpoint source code.  These packages can be sourced from the Python Standard Library (lib), or packages from the Python Package Index (pip).
+Package definitions are used to include external packages in both module and endpoint source code.  These packages can be sourced from the Python Standard Library (lib), or from the Python Package Index (pip).
 ```yaml
 packages:
     <package name>:
