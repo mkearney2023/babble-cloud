@@ -7,7 +7,7 @@ readme = "README.md"
 packages = [{include = "babble"}]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = ">=3.7.2,<4.0"
 simiple-term-menu = "1.6.1"
 yaspin = "2.3.0"
 
