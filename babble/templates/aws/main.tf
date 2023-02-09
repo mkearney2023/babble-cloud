@@ -15,7 +15,7 @@ terraform {
     }
 }
 locals {
-  state    = yamldecode(file("${path.module}/state.yaml"))
+  state    = yamldecode(file("${path.module}/../state.yaml"))
   layer    = "${local.state.id}_layer"
   function = "${local.state.id}_function"
   api      = "${local.state.id}_api"

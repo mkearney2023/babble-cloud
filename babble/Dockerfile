@@ -19,6 +19,7 @@ RUN terraform -chdir=/providers init
 
 COPY scripts /scripts
 COPY templates /templates
-COPY projects /projects
+COPY volumes /volumes
+COPY docker_entry.py /docker_entry.py
 
-ENTRYPOINT ["python3", "scripts/entrypoint.py"]
+ENTRYPOINT ["python3", "docker_entry.py"]
