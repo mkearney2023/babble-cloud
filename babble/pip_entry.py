@@ -45,24 +45,24 @@ args = parser.parse_args()
 
 def main():
     if args.action == "create":
-        os.system(f"docker run --rm -v {volumes}:/volumes -it babble-cloud create")
+        os.system(f"docker run --rm -v {volumes}:/volumes -it {image_name} create")
     elif args.action == "delete":
-        os.system(f"docker run --rm -v {volumes}:/volumes -it babble-cloud delete")
+        os.system(f"docker run --rm -v {volumes}:/volumes -it {image_name} delete")
     elif args.action == "activate":
-        os.system(f"docker run --rm -v {volumes}:/volumes -it babble-cloud activate")
+        os.system(f"docker run --rm -v {volumes}:/volumes -it {image_name} activate")
     elif args.action == "deactivate":
-        os.system(f"docker run --rm -v {volumes}:/volumes -it babble-cloud deactivate")
+        os.system(f"docker run --rm -v {volumes}:/volumes -it {image_name} deactivate")
     elif args.action == "view":
-        os.system(f"docker run --rm -v {volumes}:/volumes -it babble-cloud view")
+        os.system(f"docker run --rm -v {volumes}:/volumes -it {image_name} view")
     elif args.action == "push":
         with open(args.file, "r") as f:
             content = f.read()
         with open(tempfile_path, "w") as f:
             f.write(content)
-        os.system(f"docker run --rm -v {volumes}:/volumes -it babble-cloud push")
+        os.system(f"docker run --rm -v {volumes}:/volumes -it {image_name} push")
         os.remove(tempfile_path)
     elif args.action == "pull":
-        os.system(f"docker run --rm -v {volumes}:/volumes -it babble-cloud pull")
+        os.system(f"docker run --rm -v {volumes}:/volumes -it {image_name} pull")
         with open(tempfile_path, "r") as f:
             content = f.read()
         with open(args.file, "w") as f:
